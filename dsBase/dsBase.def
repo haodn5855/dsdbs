@@ -1,0 +1,13 @@
+LIBRARY	"dsBase"
+
+EXPORTS
+	gxSysInit			@1
+	gxSysRelease		@2
+	gxWriteLog			@3
+	AToTime				@4
+	TimeToA				@5
+	GetCfgFileName		@8
+	GetPathName			@9
+	StartThread			@10
+	ntoh64				@11
+	hton64				@12
