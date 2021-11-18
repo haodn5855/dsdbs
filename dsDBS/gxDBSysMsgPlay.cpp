@@ -1,29 +1,29 @@
 /******************************************************************************
-**************************¶¦Ê¯Êý¾Ý*********************************************
+**************************é¼ŽçŸ³æ•°æ®*********************************************
 *******************************************************************************
-	*°æÈ¨£º2013-2021 ºÂ¶àÄê °æÈ¨ËùÓÐ 
-	*°æ±¾£º1.8
-	*×÷Õß£ººÂ¶àÄê
-	*Î¢ÐÅ£º19843355855
-	*ÓÊÏä£ºhan_dn@sohu.com
-	*ÃâÔð¼°°æÈ¨ÉùÃ÷£º
-	1¡¢Ê¹ÓÃ±¾¿ªÔ´²úÆ·Ê±±ØÐëÍêÕû±£Áô´Ë°æÈ¨¼°ÃâÔðÉùÃ÷£¬²»ÄÜ¶Ô´Ë°æÈ¨¼°ÃâÔðÉùÃ÷½øÐÐ
-	ÈÎºÎÔö¼Ó¡¢ÐÞ¸Ä¡¢É¾³ýµÈ²Ù×÷¡£
-	2¡¢Ê¹ÓÃ±¾²úÆ·»òÏíÊÜÏà¹Ø¼¼ÊõÖ§³Ö·þÎñµÈÐè×ñÊØÖÐ¹úÏà¹Ø·¨ÂÉ¼°ËùÔÚ¹ú·¨ÂÉ¡£Èô½«²ú
-	 Æ·»ò·þÎñÓÃÓÚ·Ç·¨Ä¿µØÓë×÷ÕßÎÞ¹Ø¡£×÷Õß²»¸ºÁ¬´øÔðÈÎ£¬ËùÓÐÔðÈÎÓÉÊ¹ÓÃÕß×ÔÐÐ³Ðµ£¡£
-	3¡¢±¾²úÆ·ÎÞ·¨×öµ½ÁãBug¡£¹Ê²»³Ðµ£Òò±¾²úÆ·Bug»òÈ±ÏÝµ¼ÖÂµÄÈÎºÎºó¹û¡£Òò´Ë,ÔÚÊ¹
-	 ÓÃ±¾²úÆ·Ç°ÇëÎñ±Ø×öºÃÏà¹Ø²âÊÔ¡£
-	4¡¢±¾¿ªÔ´²úÆ·ÏÖÔÚ»ò½«À´»áÌá¹©Óë¶à¸ö¿ªÔ´²úÆ·ÈçMy Sql,protobuf,redisµÈµÄ½ÓÈëÊ¾
-	Àý£¬Èô½ÓÈëÊ¾Àý´æÔÚ¶ÔÏàÓ¦¿ªÔ´²úÆ·ÇÖÈ¨Çë¼°Ê±¸æÖª£¬½«½øÐÐÏàÓ¦ÐÞ¸Ä»òÉ¾³ý;Ê¹ÓÃÕß
-	ÔÚÊ¹ÓÃ±¾²úÆ·Ê±ÓÃµ½ÏàÓ¦µÄ¿ªÔ´²úÆ·£¬Çë×ÔÐÐ»ñµÃÏà¹Ø²úÆ·µÄÊ¹ÓÃÐí¿É¡£
-	5¡¢¹«Ë¾»ò×éÖ¯ÉÙÓÚ100ÈËÇÒ·þÎñÆ÷ÉÙÓÚ50Ì¨ÒÔ¼°¸öÈËÊ¹ÓÃÕßÔÚ·ûºÏÖÐ¹úÏà¹Ø·¨ÂÉ¼°Ëù
-	 ÔÚ¹ú·¨ÂÉ£¬²¢±£Áô±¾²úÆ·ÍêÕûÃâÔð¼°°æÈ¨ÉùÃ÷¡£¿ÉÈÎÒâ¸´ÖÆ¡¢ÐÞ¸Ä¡¢Ê¹ÓÃ¡¢Ñ§Ï°Ïà¹Ø
-	 ´úÂë¡£
-	6¡¢¹«Ë¾»ò×éÖ¯´óÓÚ100ÈË»ò·þÎñÆ÷´óÓÚ50Ì¨µÄÊ¹ÓÃ±¾²úÆ·¾ùÐè»ñµÃÊ¹ÓÃÐí¿É£¬²»ÂÛÊÇ
-	Ö±½Ó»ò¼ä½ÓÊ¹ÓÃ»òºÎÖÖÇþµÀ´ÓµÚÈý·½»ñµÃº¬ÓÐ±¾²úÆ·µÄÔ´´úÂë»ò¾­¹ý±àÒë·¢²¼µÄ²úÆ·
-	¾ùÐè»ñµÃÊ¹ÓÃÐí¿É¡£
+	*ç‰ˆæƒï¼š2013-2021 éƒå¤šå¹´ ç‰ˆæƒæ‰€æœ‰ 
+	*ç‰ˆæœ¬ï¼š1.8
+	*ä½œè€…ï¼šéƒå¤šå¹´
+	*å¾®ä¿¡ï¼š19843355855
+	*é‚®ç®±ï¼šhan_dn@sohu.com
+	*å…è´£åŠç‰ˆæƒå£°æ˜Žï¼š
+	1ã€ä½¿ç”¨æœ¬å¼€æºäº§å“æ—¶å¿…é¡»å®Œæ•´ä¿ç•™æ­¤ç‰ˆæƒåŠå…è´£å£°æ˜Žï¼Œä¸èƒ½å¯¹æ­¤ç‰ˆæƒåŠå…è´£å£°æ˜Žè¿›è¡Œ
+	ä»»ä½•å¢žåŠ ã€ä¿®æ”¹ã€åˆ é™¤ç­‰æ“ä½œã€‚
+	2ã€ä½¿ç”¨æœ¬äº§å“æˆ–äº«å—ç›¸å…³æŠ€æœ¯æ”¯æŒæœåŠ¡ç­‰éœ€éµå®ˆä¸­å›½ç›¸å…³æ³•å¾‹åŠæ‰€åœ¨å›½æ³•å¾‹ã€‚è‹¥å°†äº§
+	 å“æˆ–æœåŠ¡ç”¨äºŽéžæ³•ç›®åœ°ä¸Žä½œè€…æ— å…³ã€‚ä½œè€…ä¸è´Ÿè¿žå¸¦è´£ä»»ï¼Œæ‰€æœ‰è´£ä»»ç”±ä½¿ç”¨è€…è‡ªè¡Œæ‰¿æ‹…ã€‚
+	3ã€æœ¬äº§å“æ— æ³•åšåˆ°é›¶Bugã€‚æ•…ä¸æ‰¿æ‹…å› æœ¬äº§å“Bugæˆ–ç¼ºé™·å¯¼è‡´çš„ä»»ä½•åŽæžœã€‚å› æ­¤,åœ¨ä½¿
+	 ç”¨æœ¬äº§å“å‰è¯·åŠ¡å¿…åšå¥½ç›¸å…³æµ‹è¯•ã€‚
+	4ã€æœ¬å¼€æºäº§å“çŽ°åœ¨æˆ–å°†æ¥ä¼šæä¾›ä¸Žå¤šä¸ªå¼€æºäº§å“å¦‚My Sql,protobuf,redisç­‰çš„æŽ¥å…¥ç¤º
+	ä¾‹ï¼Œè‹¥æŽ¥å…¥ç¤ºä¾‹å­˜åœ¨å¯¹ç›¸åº”å¼€æºäº§å“ä¾µæƒè¯·åŠæ—¶å‘ŠçŸ¥ï¼Œå°†è¿›è¡Œç›¸åº”ä¿®æ”¹æˆ–åˆ é™¤;ä½¿ç”¨è€…
+	åœ¨ä½¿ç”¨æœ¬äº§å“æ—¶ç”¨åˆ°ç›¸åº”çš„å¼€æºäº§å“ï¼Œè¯·è‡ªè¡ŒèŽ·å¾—ç›¸å…³äº§å“çš„ä½¿ç”¨è®¸å¯ã€‚
+	5ã€å…¬å¸æˆ–ç»„ç»‡å°‘äºŽ100äººä¸”æœåŠ¡å™¨å°‘äºŽ50å°ä»¥åŠä¸ªäººä½¿ç”¨è€…åœ¨ç¬¦åˆä¸­å›½ç›¸å…³æ³•å¾‹åŠæ‰€
+	 åœ¨å›½æ³•å¾‹ï¼Œå¹¶ä¿ç•™æœ¬äº§å“å®Œæ•´å…è´£åŠç‰ˆæƒå£°æ˜Žã€‚å¯ä»»æ„å¤åˆ¶ã€ä¿®æ”¹ã€ä½¿ç”¨ã€å­¦ä¹ ç›¸å…³
+	 ä»£ç ã€‚
+	6ã€å…¬å¸æˆ–ç»„ç»‡å¤§äºŽ100äººæˆ–æœåŠ¡å™¨å¤§äºŽ50å°çš„ä½¿ç”¨æœ¬äº§å“å‡éœ€èŽ·å¾—ä½¿ç”¨è®¸å¯ï¼Œä¸è®ºæ˜¯
+	ç›´æŽ¥æˆ–é—´æŽ¥ä½¿ç”¨æˆ–ä½•ç§æ¸ é“ä»Žç¬¬ä¸‰æ–¹èŽ·å¾—å«æœ‰æœ¬äº§å“çš„æºä»£ç æˆ–ç»è¿‡ç¼–è¯‘å‘å¸ƒçš„äº§å“
+	å‡éœ€èŽ·å¾—ä½¿ç”¨è®¸å¯ã€‚
 *******************************************************************************
-**************************¶¦Ê¯Êý¾Ý*********************************************
+**************************é¼ŽçŸ³æ•°æ®*********************************************
 ******************************************************************************/
 
 #include "gxDBSysMsgPlay.h"
@@ -56,12 +56,12 @@ int CgxDBSysMsgWhere::MemberStrToInt()
 	if( strlen(m_szAckMember) >2)
 	{
 		if( GetMemberAddSub(m_szAckMember,m_nAckMember,m_nAckAdd,m_nAckSub) <0)
-			gxWriteLog("MsgCol:AckMember%s ¸ñÊ½´íÎó! DSWhereID[%d]", m_szAckMember,m_nDSWhereID) ;
+			gxWriteLog("MsgCol:AckMember%s æ ¼å¼é”™è¯¯! DSWhereID[%d]", m_szAckMember,m_nDSWhereID) ;
 	}
 	if( strlen(m_szReqMember) >2)
 	{
 		if(GetMemberAddSub(m_szReqMember,m_nReqMember,m_nReqAdd,m_nReqSub) <0)
-			gxWriteLog("MsgCol:ReqMember%s ¸ñÊ½´íÎó! DSWhereID[%d]", m_szReqMember,m_nDSWhereID) ;
+			gxWriteLog("MsgCol:ReqMember%s æ ¼å¼é”™è¯¯! DSWhereID[%d]", m_szReqMember,m_nDSWhereID) ;
 	}
 return 0 ;
 }
@@ -94,12 +94,12 @@ int CgxDBSysMsgCol::MemberStrToInt()
 	if( strlen(m_szAckMember) >2)
 	{
 		if( GetMemberAddSub(m_szAckMember,m_nAckMember,m_nAckAdd,m_nAckSub) <0)
-			gxWriteLog("MsgCol:AckMember%s ¸ñÊ½´íÎó! DSColID[%d]",m_szAckMember,m_nDSColID) ;
+			gxWriteLog("MsgCol:AckMember%s æ ¼å¼é”™è¯¯! DSColID[%d]",m_szAckMember,m_nDSColID) ;
 	}
 	if( strlen(m_szReqMember) >2)
 	{
 		if(GetMemberAddSub(m_szReqMember,m_nReqMember,m_nReqAdd,m_nReqSub) <0)
-			gxWriteLog("MsgCol:ReqMember%s ¸ñÊ½´íÎó! DSColID[%d]", m_szReqMember,m_nDSColID) ;
+			gxWriteLog("MsgCol:ReqMember%s æ ¼å¼é”™è¯¯! DSColID[%d]", m_szReqMember,m_nDSColID) ;
 	}
 return 0 ;
 }
@@ -153,17 +153,17 @@ int CgxDBSysMsgPlay::MemberStrToInt()
 	if( strlen(m_szAddTableName) >2)
 	{
 		if( GetMemberAddSub(m_szAddTableName,m_nAddTabMember,m_nAddTabAdd,m_nAddTabSub) <0)
-			gxWriteLog("CgxDBSysMsgPlay:m_szAddTableName%s ¸ñÊ½´íÎó! DSMsgPlayID[%d]", m_szAddTableName,m_nDSMsgPlayID) ;
+			gxWriteLog("CgxDBSysMsgPlay:m_szAddTableName%s æ ¼å¼é”™è¯¯! DSMsgPlayID[%d]", m_szAddTableName,m_nDSMsgPlayID) ;
 	}
 	if( strlen(m_szTableNameSufID) >2)
 	{
 		if(GetMemberAddSub(m_szTableNameSufID,m_nTabSufMember,m_nTabSufAdd,m_nTabSufSub) <0)
-			gxWriteLog("CgxDBSysMsgPlay:m_szTableNameSufID%s ¸ñÊ½´íÎó! DSMsgPlayID[%d]", m_szTableNameSufID,m_nDSMsgPlayID) ;
+			gxWriteLog("CgxDBSysMsgPlay:m_szTableNameSufID%s æ ¼å¼é”™è¯¯! DSMsgPlayID[%d]", m_szTableNameSufID,m_nDSMsgPlayID) ;
 	}
 	if( strlen(m_szRetMember) >2)
 	{
 		if(GetMemberAddSub(m_szRetMember,m_nRetMember,m_nRetAdd,m_nRetSub) <0)
-			gxWriteLog("CgxDBSysMsgPlay:m_szRetMember%s ¸ñÊ½´íÎó! DSMsgPlayID[%d]", m_szTableNameSufID,m_nDSMsgPlayID) ;
+			gxWriteLog("CgxDBSysMsgPlay:m_szRetMember%s æ ¼å¼é”™è¯¯! DSMsgPlayID[%d]", m_szTableNameSufID,m_nDSMsgPlayID) ;
 	}
 return 0 ;
 }
@@ -445,7 +445,7 @@ int CgxDBSysMsgPlay::SetAckMsg(CgxMsgBufPlay &_Req,CgxMsgBufPlay &_Ack)
 		_Ack.SetInt64Data(m_nAckID, m_AckMsgIDMember[0],m_AckMsgIDMember[1],m_AckMsgIDMember[2]);
 		break;
 	default:
-		gxWriteLog("ÏûÏ¢´¦ÀíÓ¦´ðÍ·ÐÅÏ¢ÅäÖÃ²»ÕýÈ·£¡DSMsgPlayID[%8d],AckID[%8d],ReqID[%8d]",
+		gxWriteLog("æ¶ˆæ¯å¤„ç†åº”ç­”å¤´ä¿¡æ¯é…ç½®ä¸æ­£ç¡®ï¼DSMsgPlayID[%8d],AckID[%8d],ReqID[%8d]",
 			m_nDSMsgPlayID,m_nAckID,m_nReqID) ;
 		break;
 	}
@@ -455,7 +455,7 @@ int CgxDBSysMsgPlay::SetAckMsgHeadLen(CgxMsgBufPlay &_Ack)
 {
 	int Len = _Ack.GetDataLen() ;
 	if( _Ack.SetHeadLen(Len , m_AckMsgLenMember[0],m_AckMsgLenMember[1],m_AckMsgLenMember[2],m_AckMsgLenMember[3])  <0)
-		gxWriteLog("ÏûÏ¢´¦ÀíÉèÖÃÐÅÏ¢Í·³¤¶È³ö´í£¬Çë¼ì²éÅäÖÃ£¡DSMsgPlayID[%8d],AckID[%8d],ReqID[%8d] Len[%8d]",
+		gxWriteLog("æ¶ˆæ¯å¤„ç†è®¾ç½®ä¿¡æ¯å¤´é•¿åº¦å‡ºé”™ï¼Œè¯·æ£€æŸ¥é…ç½®ï¼DSMsgPlayID[%8d],AckID[%8d],ReqID[%8d] Len[%8d]",
 			m_nDSMsgPlayID,m_nAckID,m_nReqID,Len) ;
 return 0 ; 
 }
@@ -500,12 +500,12 @@ int CgxDBSysMsgPlay::SetSelectMsgData(CgxDBSysMsgCol *_pMsgCol,DBCOLINFO * _pInf
 				memset(pTmp , 0 , sizeof(char) * (Len +1) ) ; 
 				strncpy(pTmp ,(char*) _pInfo->pVar , Len) ; 
 				_pMsgBuf->SetSuffixData(pTmp ,Len +1 ,_pMsgCol->m_nAckMember,_nAddIdx,_pMsgCol->m_nAckSub ) ; 
-				delete pTmp ; 
+				delete []pTmp ; 
 			}
 		}
 		break; 
 	default :
-		gxWriteLog("Î´ÖªÊý¾ÝÀàÐÍ(%d)£¡MAS=(%d ,%d,%d)" ,
+		gxWriteLog("æœªçŸ¥æ•°æ®ç±»åž‹(%d)ï¼MAS=(%d ,%d,%d)" ,
 			Type,_pMsgCol->m_nAckMember,_nAddIdx,_pMsgCol->m_nAckSub ) ;
 	}
 return 0 ; 
@@ -901,17 +901,17 @@ int CgxDBSysMsgPlayList::LoadDBSys(void *_pDBPool,int _nDBType,int _nDSSVRID)
 		return -1 ; 
 	if( LoadDBSysMsgPlay(_pDBPool, _nDBType,_nDSSVRID) <0)
 	{
-		gxWriteLog("¼ÓÔØÏûÏ¢´¦Àí¶¨Òå±íÊ§°Ü£¡");
+		gxWriteLog("åŠ è½½æ¶ˆæ¯å¤„ç†å®šä¹‰è¡¨å¤±è´¥ï¼");
 		return -5;
 	}
 	if( LoadDBSysMsgColPlay(_pDBPool, _nDBType,_nDSSVRID) <0)
 	{
-		gxWriteLog("¼ÓÔØÏûÏ¢´¦ÀíÁÐ¶¨Òå±íÊ§°Ü£¡");
+		gxWriteLog("åŠ è½½æ¶ˆæ¯å¤„ç†åˆ—å®šä¹‰è¡¨å¤±è´¥ï¼");
 		return -6;
 	}
 	if( LoadDBSysMsgWherePlay(_pDBPool, _nDBType,_nDSSVRID) <0)
 	{
-		gxWriteLog("¼ÓÔØÏûÏ¢´¦ÀíÌõ¼þ¶¨Òå±íÊ§°Ü£¡");
+		gxWriteLog("åŠ è½½æ¶ˆæ¯å¤„ç†æ¡ä»¶å®šä¹‰è¡¨å¤±è´¥ï¼");
 		return -7;
 	}
 return 0;
@@ -1136,7 +1136,7 @@ int CgxDBSysDBSvrInfo::InitDB()
 				return -10 ;
 		}else
 		{
-			gxWriteLog("Î´ÖªµÄÊý¾Ý¿âÀàÐÍ[%d]", m_nDBType) ;
+			gxWriteLog("æœªçŸ¥çš„æ•°æ®åº“ç±»åž‹[%d]", m_nDBType) ;
 			return -2 ;
 		}
 		break;
