@@ -461,7 +461,7 @@ return 0 ;
 }
 int CgxDBSysMsgPlay::SetSelectMsgData(CgxDBSysMsgCol *_pMsgCol,DBCOLINFO * _pInfo,CgxMsgBufPlay *_pMsgBuf,int _nAddIdx)
 {
-	if(( _pMsgCol == NULL ) || (_pInfo == NULL) || (_pInfo == NULL))
+	if(( _pMsgCol == NULL ) || (_pInfo == NULL) || (_pMsgBuf == NULL))
 		return -1 ; 
 
 	int Type = 	_pMsgBuf->GetDataType(_pMsgCol->m_nAckMember,_nAddIdx,_pMsgCol->m_nAckSub ) ; 
