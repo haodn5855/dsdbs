@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dsDBS", "dsDBS\dsDBS.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dsExpSvr", "dsExpSvr\dsExpSvr.vcxproj", "{C90C4E19-F767-4399-944D-132492A71398}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dsExpClnt", "dsExpClnt\dsExpClnt.vcxproj", "{6DCBBE95-9714-403F-BB3C-8F629CF4CA69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -25,6 +27,10 @@ Global
 		{C90C4E19-F767-4399-944D-132492A71398}.Debug|Win32.Build.0 = Debug|Win32
 		{C90C4E19-F767-4399-944D-132492A71398}.Release|Win32.ActiveCfg = Release|Win32
 		{C90C4E19-F767-4399-944D-132492A71398}.Release|Win32.Build.0 = Release|Win32
+		{6DCBBE95-9714-403F-BB3C-8F629CF4CA69}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6DCBBE95-9714-403F-BB3C-8F629CF4CA69}.Debug|Win32.Build.0 = Debug|Win32
+		{6DCBBE95-9714-403F-BB3C-8F629CF4CA69}.Release|Win32.ActiveCfg = Release|Win32
+		{6DCBBE95-9714-403F-BB3C-8F629CF4CA69}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
