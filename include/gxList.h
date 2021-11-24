@@ -31,54 +31,44 @@
 #define GX_LIST_2011_01_01
 
 #pragma warning(disable:4127)
+#pragma warning(disable:4150)
 
 #include <windows.h>
 namespace zsGame
 {
-
 typedef int (__cdecl *LISTCOMPFUNC)(const void *_pItem1,const void *_pItem2);
-
-
 int zsDefaultCompListItemFunc(const void *_pItem1,const void *_pItem2);
 
 template <class TYPE> class CgxList
 {
 public:
-	
 	CgxList(int _nCnIncr=16) 
 	{
 		m_cnIncr=_nCnIncr;
+		m_pList=NULL;
 		m_nTotal= 0 ;
 		m_nCount=0;
-		m_pList=NULL;
 	}
 	virtual ~CgxList()
 	{
-		free(m_pList);
-		m_pList = NULL ;
+		RemoveAll(TRUE);
 	}
-
 public:
+	inline int GetCount()
+	{
+		return m_nCount;
+	}
 	
 	inline void SetIncrCount(int _cnIncr=16)
 	{
 		m_cnIncr=_cnIncr;
 	}
 
-	inline int GetCount()
-	{
-		return m_nCount;
-	}
-
-	
 	inline BOOL IsEmpty()
 	{
 		return !m_nCount;
 	}
 
-	
-	
-	
 	BOOL RemoveAll(BOOL _bFreeList=TRUE)
 	{
 		if (_bFreeList)
@@ -90,42 +80,24 @@ public:
 		m_nCount=0;
 		return TRUE;
 	}
-
-	
 	inline TYPE *GetHead()
 	{
 		if (m_nCount<=0) 
 			return NULL;
 		return m_pList[0];
 	}
-
-	
+	inline TYPE *GetAt(int _nPos)
+	{
+		if ((_nPos<0) ||( _nPos>=m_nCount)) 
+			return NULL;
+		return m_pList[_nPos];
+	}
 	inline TYPE *GetTail()
 	{
 		if (m_nCount<=0) 
 			return NULL;
 		return m_pList[m_nCount-1];
 	}
-
-	
-	inline TYPE *GetAt(int _nPos)
-	{
-		if (_nPos<0 || _nPos>=m_nCount) 
-			return NULL;
-		return m_pList[_nPos];
-	}
-
-	
-	BOOL AddTail(TYPE *_pItem)
-	{
-		if (!ReallocMem()) 
-			return FALSE;
-
-		m_pList[m_nCount++]=_pItem;
-		return TRUE;
-	}
-
-	
 	BOOL AddHead(TYPE *_pItem)
 	{
 		if (!ReallocMem()) 
@@ -136,17 +108,12 @@ public:
 		return TRUE;
 	}
 
-	
 	BOOL AddAt(int _nPos,TYPE *_pItem)
 	{
-		
 		if (_nPos<=0) 
 			return AddHead(_pItem);
-		
 		if (_nPos>=m_nCount) 
 			return AddTail(_pItem);
-
-		
 		if (!ReallocMem()) 
 			return FALSE;
 
@@ -155,56 +122,51 @@ public:
 		m_nCount++;
 		return TRUE;
 	}
-
-	
-	BOOL ReplaceAt(int _nPos,TYPE *_pItem)
+	BOOL AddTail(TYPE *_pItem)
 	{
-		if (_nPos<0) 
+		if (!ReallocMem()) 
 			return FALSE;
-		if (_nPos>=m_nCount) 
-			return FALSE;
-
-		m_pList[_nPos]=_pItem;
+		m_pList[m_nCount++]=_pItem;
 		return TRUE;
 	}
-
-	
 	BOOL RemoveHead()
 	{
-		if (m_nCount==0) 
+		if (m_nCount<=0) 
 			return FALSE;
-
 		memmove(m_pList,m_pList+1,(m_nCount-1)*sizeof(TYPE *));
 		m_nCount--;
 		return TRUE;
 	}
-
 	
+	BOOL ReplaceAt(int _nPos,TYPE *_pItem)
+	{
+		if ((_nPos<0)  || (_nPos>=m_nCount))
+			return FALSE;
+		m_pList[_nPos]=_pItem;
+		return TRUE;
+	}
+
 	BOOL RemoveTail()
 	{
-		if (m_nCount==0) 
+		if (m_nCount<=0) 
 			return FALSE;
 		m_nCount--;
 		return TRUE;
 	}
-
 	
 	BOOL RemoveAt(int _nPos)
 	{
-		if (_nPos>=m_nCount) 
+		if ((_nPos>=m_nCount) || (_nPos <0))
 			return FALSE;
 		memmove(m_pList+_nPos,m_pList+_nPos+1,(m_nCount-_nPos-1)*sizeof(TYPE *));
 		m_nCount--;
 		return TRUE;
 	}
 
-	
-	
 	int FindItemPos(TYPE *_pItem,LISTCOMPFUNC _pCompFunc=NULL)
 	{
 		if (m_nCount<=0) 
 			return -1;
-
 		for (int i=0;i<m_nCount;i++)
 		{
 			if (_pCompFunc==NULL)
@@ -220,8 +182,6 @@ public:
 		}
 		return -1;
 	}
-
-	
 	
 	TYPE *FindItem(TYPE *_pItem,LISTCOMPFUNC _pCompFunc=NULL)
 	{
@@ -230,7 +190,6 @@ public:
 			return NULL;
 		return m_pList[nPos];
 	}
-
 	
 	BOOL DeleteItem(TYPE *_pItem,LISTCOMPFUNC _pCompFunc=NULL)
 	{
@@ -240,7 +199,6 @@ public:
 		return RemoveAt(nPos);
 	}
 
-	
 	void Sort(LISTCOMPFUNC _pCompFunc)
 	{
 		if (m_nCount>0)
@@ -251,7 +209,8 @@ public:
 
 	TYPE *Search(TYPE *_pItem,LISTCOMPFUNC _pCompFunc)
 	{
-		if (m_pList!=NULL){
+		if (m_pList!=NULL)
+		{
 			DWORD *pdw=(DWORD *)bsearch(&_pItem,m_pList,m_nCount,sizeof(TYPE *),_pCompFunc);
 			if (pdw==NULL) 
 				return NULL;
@@ -262,14 +221,12 @@ public:
 	
 	BOOL Insert(TYPE *_pItem,LISTCOMPFUNC _pCompFunc)
 	{
-		
 		if (m_nCount==0) 
 			return AddTail(_pItem);
 
 		TYPE *pItemTmp=NULL;
 		if (m_nCount==1)
 		{
-			
 			pItemTmp=GetHead();
 			if (_pCompFunc(&_pItem,&pItemTmp)<=0) 
 				return AddHead(_pItem);
@@ -286,15 +243,10 @@ public:
 		if (_pCompFunc(&_pItem,&pItemTmp)>=0) 
 			return AddTail(_pItem);
 
-#pragma warning(disable:4127)
 		while (TRUE)
-#pragma warning(default:4127)
 		{
-			
 			if (n1+1==n2) 
 				return AddAt(n2,_pItem);
-
-			
 			int n=n1+(n2-n1)/2;
 			pItemTmp=GetAt(n);
 			int nRet=_pCompFunc(&_pItem,&pItemTmp);
@@ -306,8 +258,6 @@ public:
 		}
 		return FALSE;
 	}
-
-	
 	int FindPos(TYPE *_pItem,LISTCOMPFUNC _pCompFunc)
 	{
 		if (m_nCount<=0) 
@@ -318,7 +268,6 @@ public:
 			return -1;
 		return int(pdw-(LPVOID *)m_pList);
 	}
-
 	
 	TYPE *Find(TYPE *_pItem,LISTCOMPFUNC _pCompFunc)
 	{
@@ -328,7 +277,6 @@ public:
 		return m_pList[nPos];
 	}
 
-	
 	BOOL Delete(TYPE *_pItem,LISTCOMPFUNC _pCompFunc)
 	{
 		int nPos=FindPos(_pItem,_pCompFunc);
@@ -336,8 +284,6 @@ public:
 			return FALSE;
 		return RemoveAt(nPos);
 	}
-
-	
 	void FreeAll(BOOL _bFreeList=FALSE)
 	{
 		for (int i=0;i<m_nCount;i++)
@@ -347,25 +293,19 @@ public:
 		RemoveAll(_bFreeList);
 	}
 
-	
 	void DeleteAll(BOOL _bFreeList=FALSE)
 	{
 		for (int i=0;i<m_nCount;i++)
 		{
-#pragma warning(disable:4150)
 			delete m_pList[i];
-#pragma warning(default:4150)
 		}
 		RemoveAll(_bFreeList);
 	}
-
 private:
-	
 	BOOL ReallocMem()
 	{
 		if (m_nTotal > m_nCount) 
 			return TRUE;
-
 		TYPE **pList=(TYPE **)realloc(m_pList,(m_nTotal+m_cnIncr)*sizeof(TYPE *));
 		if (pList==NULL) 
 			return FALSE;
@@ -382,4 +322,8 @@ private:
 };
 
 }
+
+#pragma warning(default:4127)
+#pragma warning(default:4150)
+
 #endif 
