@@ -13,7 +13,7 @@ Include		    接口头文件
 Lib		        库文件	
 Debug		    编译输出目录
 dsExpPB         Protobuf协议客户端模拟程序，向dsDBSExp发请求消息（select、insert、update、delete）
-dsProtobuf      ProtoBuf协议接入示例动态库
+dsPB            ProtoBuf协议接入示例动态库
 
 dsBase.dll	    鼎石基类,接口虚类
 dsDBS.dll	    实现类 odbc,byte1，动态加载dsPB.dll、dsMySql.dll及基它扩展
