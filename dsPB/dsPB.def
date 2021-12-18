@@ -1,0 +1,4 @@
+LIBRARY
+
+EXPORTS
+	DSCreateMsgBuf    @1
