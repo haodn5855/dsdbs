@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.0.23, for Win64 (x86_64)
+﻿-- MySQL dump 10.13  Distrib 8.0.23, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ds_sys_db
 -- ------------------------------------------------------
@@ -342,7 +342,7 @@ CREATE TABLE `ds_sys_sysinterfacecfg` (
 
 LOCK TABLES `ds_sys_sysinterfacecfg` WRITE;
 /*!40000 ALTER TABLE `ds_sys_sysinterfacecfg` DISABLE KEYS */;
-INSERT INTO `ds_sys_sysinterfacecfg` VALUES (1,20008,0,'Protobuf.dll','..\\Debug\\',1,NULL);
+INSERT INTO `ds_sys_sysinterfacecfg` VALUES (1,20008,0,'dsPB.dll','..\\Debug\\',1,NULL);
 /*!40000 ALTER TABLE `ds_sys_sysinterfacecfg` ENABLE KEYS */;
 UNLOCK TABLES;
 
